@@ -1,5 +1,5 @@
 subprojects {
-    version = '3.0-modularity'
+    version = '3.0.1-modularity'
 
     apply plugin: 'java'
     apply plugin: 'eclipse'
