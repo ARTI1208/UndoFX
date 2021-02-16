@@ -1,11 +1,21 @@
-apply plugin: 'maven'
-apply plugin: 'signing'
+plugins {
+    id 'maven'
+    id 'signing'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
+}
 
 group = 'org.fxmisc.undo'
 
 dependencies {
-    compile group: 'org.reactfx', name: 'reactfx', version: '2.0-M5'
+
+    implementation 'com.github.ARTI1208:ReactFX:v3.0.1-modularity'
+
     testCompile group: 'junit', name: 'junit', version: '[4.0,)'
+}
+
+javafx {
+    version = "15.0.1"
+    modules = [ 'javafx.base', 'javafx.graphics', 'javafx.controls' ]
 }
 
 javadoc {

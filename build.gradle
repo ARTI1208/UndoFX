@@ -1,15 +1,16 @@
 subprojects {
-    version = '1.0.0-SNAPSHOT'
+    version = '2.0-modularity'
 
     apply plugin: 'java'
     apply plugin: 'eclipse'
 
     repositories {
         mavenCentral()
+        maven { url 'https://jitpack.io' }
     }
 
-    sourceCompatibility = '1.8'
-    targetCompatibility = '1.8'
+    sourceCompatibility = '11'
+    targetCompatibility = '11'
 
     task getVersion {
         doLast {
